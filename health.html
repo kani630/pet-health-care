@@ -1,0 +1,83 @@
+<!-- Vaccination Reminder -->
+<div class="reminder-box">
+    <h2>💉 Vaccination Reminder</h2>
+
+    <p><b>Pet Name:</b> Bruno 🐶</p>
+    <p><b>Vaccine:</b> Anti-Rabies</p>
+    <p><b>Next Due Date:</b> 15-10-2026</p>
+
+    <div class="reminder-message">
+        ⏰ Reminder: Vaccination is due soon!
+    </div>
+</div>
+
+<style>
+<!-- Vaccination Reminder -->
+<div class="reminder-box">
+    <h2>💉 Vaccination Reminder</h2>
+
+    <form id="vaccineForm">
+        <label>Pet Name:</label>
+        <input type="text" name="pet_name" required
+               placeholder="e.g. Bruno"><br><br>
+
+        <label>Vaccine:</label>
+        <input type="text" name="vaccine_name" required
+               placeholder="e.g. Anti-Rabies"><br><br>
+
+        <label>Next Due Date:</label>
+        <input type="date" name="vaccination_date" required><br><br>
+
+        <button type="submit">Save Reminder</button>
+    </form>
+
+    <p id="vaccineMessage"></p>
+</div>
+
+<style>
+.reminder-box {
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    text-align: center;
+}
+.reminder-box input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.reminder-box button {
+    padding: 12px 20px;
+    background: #7137d8;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+document.getElementById("vaccineForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    try {
+        const response = await fetch("backend/vaccination.php", {
+            method: "POST",
+            body: new FormData(this)
+        });
+
+        const result = await response.json();
+        document.getElementById("vaccineMessage").textContent = result.message;
+
+        if (result.success) this.reset();
+    } catch (error) {
+        document.getElementById("vaccineMessage").textContent =
+            "Error connecting to database. Check XAMPP and PHP file.";
+    }
+});
+</script>
+s</style>

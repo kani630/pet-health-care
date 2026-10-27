@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adopt Pets - PetCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .adopt-page {
+            padding: 70px 8%;
+            text-align: center;
+            background: linear-gradient(135deg,#fff5f8,#f3edff);
+            min-height: 100vh;
+        }
+
+        .adopt-page h1 {
+            font-size: 45px;
+            color: #7137d8;
+        }
+
+        .adopt-page > p {
+            color: #777;
+            margin: 15px 0 45px;
+        }
+
+        .pets-container {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+        }
+
+        .adopt-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,.1);
+            transition: .3s;
+        }
+
+        .adopt-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pet-pic {
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+        }
+
+        .dog {
+            background: linear-gradient(135deg,#ffd7ba,#ffc9dc);
+        }
+
+        .cat {
+            background: linear-gradient(135deg,#ddd0ff,#f2d5ff);
+        }
+
+        .bird {
+            background: linear-gradient(135deg,#c9f4ff,#d8e6ff);
+        }
+
+        .adopt-info {
+            padding: 25px;
+            text-align: left;
+        }
+
+        .adopt-info h2 {
+            color: #292536;
+        }
+
+        .adopt-info p {
+            color: #777;
+            margin: 8px 0;
+        }
+
+        .adopt-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 11px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg,#7137d8,#e54f92);
+        }
+
+        .top-home {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #7137d8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media(max-width:800px) {
+            .pets-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="adopt-page">
+
+    <a href="index.html" class="top-home">
+        ← Back to Home
+    </a>
+
+    <h1>🐾 Find Your New Friend</h1>
+
+    <p>Every pet deserves a loving and caring home ❤️</p>
+
+    <div class="pets-container">
+
+        <div class="adopt-card">
+
+            <div class="pet-pic dog">🐶</div>
+
+            <div class="adopt-info">
+                <h2>Bruno</h2>
+                <p>🐕 Labrador</p>
+                <p>🎂 2 Years</p>
+                <p>♂ Male</p>
+
+                <a href="pet-details.html" class="adopt-btn">
+                    View Details →
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="adopt-card">
+
+            <div class="pet-pic cat">🐱</div>
+
+            <div class="adopt-info">
+                <h2>Luna</h2>
+                <p>🐈 Persian Cat</p>
+                <p>🎂 1 Year</p>
+                <p>♀ Female</p>
+
+                <a href="pet-details.html" class="adopt-btn">
+                    View Details →
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="adopt-card">
+
+            <div class="pet-pic bird">🦜</div>
+
+            <div class="adopt-info">
+                <h2>Rio</h2>
+                <p>🦜 Parrot</p>
+                <p>🎂 2 Years</p>
+                <p>♂ Male</p>
+
+                <a href="pet-details.html" class="adopt-btn">
+                    View Details →
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html> No newline at end of file

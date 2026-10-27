@@ -1,0 +1,706 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffaf8;
+    color: #292536;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 75px;
+    padding: 0 7%;
+    background: rgba(255,255,255,0.95);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #7137d8;
+}
+
+.logo span {
+    color: #292536;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4c4657;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #7137d8;
+}
+
+.login-btn {
+    padding: 10px 22px;
+    color: white !important;
+    background: linear-gradient(135deg,#7137d8,#a855f7);
+    border-radius: 25px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 620px;
+    padding: 70px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 80% 20%, #ffd6ec 0%, transparent 25%),
+        radial-gradient(circle at 10% 90%, #dcd0ff 0%, transparent 30%),
+        linear-gradient(135deg,#fff7f1,#f8f1ff);
+}
+
+.hero-text {
+    width: 52%;
+}
+
+.small-title {
+    color: #e54f92;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg,#7137d8,#e54f92);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #686273;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.main-btn,
+.second-btn {
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.main-btn {
+    color: white;
+    background: linear-gradient(135deg,#7137d8,#a855f7);
+    box-shadow: 0 10px 25px rgba(113,55,216,0.25);
+}
+
+.second-btn {
+    color: #7137d8;
+    background: white;
+    border: 2px solid #eadfff;
+}
+
+.main-btn:hover,
+.second-btn:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ================= HERO PET ================= */
+
+.hero-pet {
+    width: 42%;
+    height: 480px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.circle-bg {
+    width: 390px;
+    height: 390px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg,#ffd1e5,#d7c5ff);
+
+    box-shadow: 0 25px 60px rgba(113,55,216,0.18);
+}
+
+.pet-emoji {
+    position: absolute;
+    font-size: 210px;
+
+    animation: floatPet 3s ease-in-out infinite;
+}
+
+@keyframes floatPet {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.floating-card {
+    position: absolute;
+
+    background: white;
+    padding: 13px 20px;
+
+    border-radius: 30px;
+
+    font-weight: 700;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.card-one {
+    top: 100px;
+    right: 10px;
+    color: #e54f92;
+}
+
+.card-two {
+    bottom: 100px;
+    left: 10px;
+    color: #7137d8;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    padding: 50px 8%;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+
+    background: white;
+}
+
+.feature-box {
+    padding: 30px;
+    border-radius: 20px;
+
+    background: #fff;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-8px);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 16px;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.purple {
+    background: #eee5ff;
+}
+
+.pink {
+    background: #ffe4ef;
+}
+
+.orange {
+    background: #ffead8;
+}
+
+.feature-box h3 {
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.feature-box p {
+    color: #777;
+    line-height: 1.6;
+}
+
+
+/* ================= PET SECTION ================= */
+
+.pet-section {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.section-heading span,
+.about span,
+.section-label {
+    color: #e54f92;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #777;
+    margin-bottom: 45px;
+}
+
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.pet-card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+
+    text-align: left;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.pet-card:hover {
+    transform: translateY(-10px);
+}
+
+.pet-photo {
+    height: 240px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 120px;
+
+    position: relative;
+}
+
+.dog-bg {
+    background: linear-gradient(135deg,#ffe2c4,#ffd0e0);
+}
+
+.cat-bg {
+    background: linear-gradient(135deg,#dcd0ff,#f3d5ff);
+}
+
+.golden-bg {
+    background: linear-gradient(135deg,#fff0b8,#ffd6b3);
+}
+
+.available {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    background: #dcfce7;
+    color: #16803c;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pet-info {
+    padding: 22px;
+}
+
+.pet-info h3 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.pet-info p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.pet-info a {
+    text-decoration: none;
+    color: #7137d8;
+    font-weight: 700;
+}
+
+.view-all {
+    display: inline-block;
+
+    margin-top: 45px;
+
+    text-decoration: none;
+
+    padding: 13px 25px;
+
+    border-radius: 25px;
+
+    color: #7137d8;
+
+    border: 2px solid #7137d8;
+
+    font-weight: 700;
+}
+
+
+/* ================= HEALTH ================= */
+
+.health-section {
+    padding: 90px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(135deg,#f2ebff,#ffeaf3);
+}
+
+.health-content {
+    width: 55%;
+}
+
+.health-content h2 {
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+.health-content h2 span {
+    color: #7137d8;
+}
+
+.health-content p {
+    color: #6e6878;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.health-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+.health-list div {
+    background: white;
+    padding: 15px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.health-btn {
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    text-decoration: none;
+
+    color: white;
+
+    border-radius: 25px;
+
+    background: linear-gradient(135deg,#7137d8,#e54f92);
+}
+
+.health-image {
+    width: 38%;
+    height: 350px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.health-circle {
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 130px;
+
+    background: white;
+
+    box-shadow: 0 20px 50px rgba(113,55,216,0.18);
+}
+
+.health-badge {
+    position: absolute;
+
+    bottom: 20px;
+    right: 10px;
+
+    padding: 15px 22px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    color: #16803c;
+    font-weight: 700;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 90px 15%;
+    text-align: center;
+    background: white;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.about strong {
+    color: #7137d8;
+}
+
+.about p {
+    color: #777;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+
+/* ================= CTA ================= */
+
+.cta {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: linear-gradient(135deg,#7137d8,#e54f92);
+
+    color: white;
+}
+
+.cta h2 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+.cta a {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: white;
+    color: #7137d8;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+    font-weight: 800;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 45px 8%;
+
+    background: #211d2b;
+
+    color: white;
+
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid #40394d;
+    margin: 20px 0;
+}
+
+.copyright {
+    color: #aaa;
+    font-size: 13px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 15px 5%;
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-pet {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .features,
+    .pet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .health-section {
+        flex-direction: column;
+    }
+
+    .health-content,
+    .health-image {
+        width: 100%;
+    }
+
+    .health-image {
+        margin-top: 40px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .circle-bg {
+        width: 280px;
+        height: 280px;
+    }
+
+    .pet-emoji {
+        font-size: 150px;
+    }
+
+    .health-content h2 {
+        font-size: 32px;
+    }
+
+    .health-list {
+        grid-template-columns: 1fr;
+    }
+}
